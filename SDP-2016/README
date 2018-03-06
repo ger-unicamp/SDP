@@ -1,0 +1,8 @@
+ Projeto do Seguidor de Pista 2016:
+ 
+ Atualmente, o projeto realiza a leitura da câmera linear de forma regular.
+Porém, bom o bastante para se ter uma boa noção do que se está acontecendo.
+ 
+Observação: Utilize o script /SDP-2016/Octave/TestaSerial.m para visualizar a leitura da
+câmera na tela de um computador.
+
