@@ -104,9 +104,6 @@ int main(void)
 /*lint -restore Enable_Motors MISRA rule (6.3) checking. */
 {
 	uint8 image[128];
-	uint8 lef, rig;
-	char str_lef[] = "\n\rLeft: ";
-	char str_rig[] = "\n\rRig: ";
 	SPID pid_controller;
 	double pid_error, pid_output;
 
@@ -126,7 +123,9 @@ int main(void)
 	// Setar as contantes do pid.
 	resetPID(&pid_controller);
 
-	// Wait for the SW2 button to be pressed
+	// At this point you should open GNU Octave and watch the camera's raw image
+
+	// Waits for the 'SW2' button to be pressed
 	while (!SW2_Start_Button_GetVal())
 	{
 		getRawImageMean(1);
@@ -134,6 +133,7 @@ int main(void)
 		updateBatteryLevel();
 	}
 
+	// Waits for the 'SW2' button to be released
 	while(SW2_Start_Button_GetVal());
 
 	calibration();
@@ -160,24 +160,9 @@ int main(void)
 			sendArrayOfPixels(image);
 		}
 
-	/*
-		setBorders(image, &lef, &rig);
-
-		sendString(str_lef);
-		itoa_8_bit(lef);
-
-		sendString(str_rig);
-		itoa_8_bit(rig);
-
-
-		//sendArrayOfPixels(image);
-		//sendArrayOfPixels(rawImage); // For test of rawImage
-
-
-		updateBatteryLevel();*/
 	}
 
-	// Program Loop
+	// Program loop
 	while (TRUE)
 	{
 		getRawImageMean(1);
