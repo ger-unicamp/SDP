@@ -112,20 +112,21 @@ int main(void)
 	PE_low_level_init();
 	/*** End of Processor Expert internal initialization.                    ***/
 
-
+	// enables camera stuff
 	Camera_CLK_Interruption_Enable();
 
-	// Enables motors
+	// enables dc motors
 	Enable_Motors_SetVal();
 
+	// enables servomotor
 	Servomotor_Enable();
 
 	// Setar as contantes do pid.
 	resetPID(&pid_controller);
 
-	// At this point you should open GNU Octave and watch the camera's raw image
+	// at this point you should open gnu octave and watch the camera's raw image
 
-	// Waits for the 'SW2' button to be pressed
+	// waits for the 'SW2' button to be pressed
 	while (!SW2_Start_Button_GetVal())
 	{
 		getRawImageMean(1);
@@ -133,26 +134,26 @@ int main(void)
 		updateBatteryLevel();
 	}
 
-	// Waits for the 'SW2' button to be released
+	// waits for the 'SW2' button to be released
 	while(SW2_Start_Button_GetVal());
 
-	// Calibrates the color white
+	// calibrates the color white
 	// < 60% of white level is considered black
 	calibration();
 
-	// Waits for the 'SW2' button to be release
+	// waits for the 'SW2' button to be release
 	while (!SW2_Start_Button_GetVal());
 	while(SW2_Start_Button_GetVal());
 
 
-	// Program loop
+	// program loop
 	while (TRUE)
 	{
+		// gets a frame from the camera
 		getRawImageMean(1);
-
+		
+		// binarize the image
 		binarization(image);
-
-		//sendArrayOfPixels(image);
 
 		// obtem o erro atual
 		pid_error = get_error(image);
@@ -163,7 +164,8 @@ int main(void)
 		// atua sobre a resposta do pid
 		advancedControl(pid_output);
 
-		// delay for the servo// Melhorar isso
+		// delay for the servo
+		// melhorar isso
 		for (int i = 0; i < 50000; i++);
 
 		// Update the battery indicator LED
