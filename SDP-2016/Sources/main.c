@@ -124,9 +124,9 @@ int main(void)
 	// Setar as contantes do pid.
 	resetPID(&pid_controller);
 
-	// at this point you should open gnu octave and watch the camera's raw image
+	// At this point you should open GNU Octave and watch the camera's raw image
 
-	// waits for the 'SW2' button to be pressed
+	// Waits for the 'SW2' button to be pressed
 	while (!SW2_Start_Button_GetVal())
 	{
 		getRawImageMean(1);
@@ -134,25 +134,28 @@ int main(void)
 		updateBatteryLevel();
 	}
 
-	// waits for the 'SW2' button to be released
+	// Waits for the 'SW2' button to be released
 	while(SW2_Start_Button_GetVal());
 
-	// calibrates the color white
+	// Calibrates the color white
 	// < 60% of white level is considered black
 	calibration();
 
-	// waits for the 'SW2' button to be release
+	// BE CAREFUL!
+	// At this point, if you press and release the 'SW2' button, the car you start running
+
+	// Waits for the 'SW2' button to be release
 	while (!SW2_Start_Button_GetVal());
 	while(SW2_Start_Button_GetVal());
 
 
-	// program loop
+	// Program loop
 	while (TRUE)
 	{
-		// gets a frame from the camera
+		// Gets a frame from the camera
 		getRawImageMean(1);
 		
-		// binarize the image
+		// Binarize the image
 		binarization(image);
 
 		// obtem o erro atual
