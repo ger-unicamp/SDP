@@ -136,31 +136,14 @@ int main(void)
 	// Waits for the 'SW2' button to be released
 	while(SW2_Start_Button_GetVal());
 
+	// Calibrates the color white
+	// < 60% of white level is considered black
 	calibration();
 
+	// Waits for the 'SW2' button to be release
 	while (!SW2_Start_Button_GetVal());
 	while(SW2_Start_Button_GetVal());
 
-	// test of binarization
-	while (0)
-	{
-		//getRawImageMean(1);
-
-		while (!SW2_Start_Button_GetVal())
-		{
-			getRawImageMean(1);
-			sendArrayOfPixels(rawImage);
-		}
-		while(SW2_Start_Button_GetVal());
-
-		while (!SW2_Start_Button_GetVal())
-		{
-			getRawImageMean(1);
-			binarization(image);
-			sendArrayOfPixels(image);
-		}
-
-	}
 
 	// Program loop
 	while (TRUE)
