@@ -124,9 +124,9 @@ int main(void)
 	// Setar as contantes do pid.
 	resetPID(&pid_controller);
 
-	// At this point you should open GNU Octave and watch the camera's raw image
+	// Nesse momento voce deve abrir o GNU Octave e obervar a imagem crua da camera
 
-	// Waits for the 'SW2' button to be pressed
+	// Espera o botao 'SW2' ser pressionado
 	while (!SW2_Start_Button_GetVal())
 	{
 		getRawImageMean(1);
@@ -134,11 +134,11 @@ int main(void)
 		updateBatteryLevel();
 	}
 
-	// Waits for the 'SW2' button to be released
+	// Espera o botao 'SW2' ser solto
 	while(SW2_Start_Button_GetVal());
 
-	// Calibrates the color white
-	// < 60% of white level is considered black
+	// Calibra o branco
+	// <= 60% do branco eh considerado preto
 	calibration();
 
 	// BE CAREFUL!
