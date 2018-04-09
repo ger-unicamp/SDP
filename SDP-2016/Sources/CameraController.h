@@ -1,18 +1,19 @@
 /*
  * CameraController.h
  *
- *  Created on: 30/07/2016
- *      Author: marcelo
+ * Last update on: 09/04/18
+ * Comments: code formatting only 
+ *
+ * Author: Marcelo
+ *
  */
 
 #ifndef SOURCES_CAMERACONTROLLER_H_
 #define SOURCES_CAMERACONTROLLER_H_
 
-// Includes.
 #include "PE_Types.h"
 #include "Camera_CLK_Interruption.h"
 #include "SerialCommunication.h"
-
 
 /* There are five states:
  * 1) HIGH_CLK.

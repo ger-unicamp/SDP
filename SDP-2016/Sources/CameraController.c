@@ -1,10 +1,12 @@
 /*
  * CameraController.c
  *
- *  Created on: 30/07/2016
- *      Author: marcelo
+ * Last update on: 09/04/18
+ * Comments: code formatting only 
+ *
+ * Author: Marcelo
+ *
  */
-
 
 #include "CameraController.h"
 
@@ -23,6 +25,7 @@
 // **
 // **
 // ** ===================================================================*/
+
 //void cameraStartReading(bool serialTest)
 //{
 //	if (serialTest == TRUE)
