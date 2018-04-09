@@ -1,10 +1,13 @@
 /*
- * ServoController.c
-
+ * servo_lib.c
  *
- *  Created on: 29/12/2016
- *      Author: marcelo
+ * Last update on: 09/04/18
+ * Comments: code formatting only
+ *
+ * Author: Marcelo
+ *
  */
+
 #include "servo_lib.h"
 /*
  * Parameter:

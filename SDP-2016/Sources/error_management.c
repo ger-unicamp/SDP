@@ -1,10 +1,12 @@
 /*
- * Error_management.c
+ * error_management.c
  *
- *  Created on: 27/07/2017
- *      Author: marcelo
+ * Last update on: 09/04/18
+ * Comments: code formatting only
+ *
  */
-#include "Error_management.h"
+
+#include <error_management.h>
 
 double get_error(uint8 image[])
 {

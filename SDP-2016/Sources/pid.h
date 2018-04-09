@@ -1,8 +1,9 @@
 /*
- * PID.h
+ * pid.h
  *
- *  Created on: 27/07/2017
- *      Author: marcelo
+ * Last update on: 09/04/18
+ * Comments: code formatting only
+ *
  */
 
 #ifndef SOURCES_PID_H_

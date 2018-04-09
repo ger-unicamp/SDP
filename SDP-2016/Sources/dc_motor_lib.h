@@ -1,5 +1,5 @@
 /*
- * motor_lib.h
+ * dc_motor_lib.h
  *
  * Last update on: 09/04/18
  * Comments: code formatting only
@@ -7,6 +7,7 @@
  * Author: Marcelo
  *
  */
+
 #ifndef SOURCES_DC_MOTOR_LIB_H_
 #define SOURCES_DC_MOTOR_LIB_H_
 

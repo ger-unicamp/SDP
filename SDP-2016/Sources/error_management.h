@@ -1,8 +1,9 @@
 /*
- * Error_management.h
+ * error_management.c
  *
- *  Created on: 27/07/2017
- *      Author: marcelo
+ * Last update on: 09/04/18
+ * Comments: code formatting only
+ *
  */
 
 #ifndef SOURCES_ERROR_MANAGEMENT_H_

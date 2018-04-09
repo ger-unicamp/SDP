@@ -1,8 +1,11 @@
 /*
- * ServoController.h
+ * servo_lib.h
  *
- *  Created on: 29/12/2016
- *      Author: marcelo
+ * Last update on: 09/04/18
+ * Comments: code formatting only
+ *
+ * Author: Marcelo
+ *
  */
 
 #ifndef SOURCES_SERVO_LIB_H_

@@ -1,5 +1,5 @@
 /*
- * motor_lib.c
+ * dc_motor_lib.c
  *
  * Last update on: 09/04/18
  * Comments: code formatting only

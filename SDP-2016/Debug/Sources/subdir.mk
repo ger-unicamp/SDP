@@ -4,12 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Sources/Error_management.c \
 ../Sources/Events.c \
 ../Sources/SystemController.c \
 ../Sources/battery_lib.c \
 ../Sources/camera_lib.c \
 ../Sources/dc_motor_lib.c \
+../Sources/error_management.c \
 ../Sources/image_processing_lib.c \
 ../Sources/main.c \
 ../Sources/pid.c \
@@ -17,12 +17,12 @@ C_SRCS += \
 ../Sources/servo_lib.c 
 
 OBJS += \
-./Sources/Error_management.o \
 ./Sources/Events.o \
 ./Sources/SystemController.o \
 ./Sources/battery_lib.o \
 ./Sources/camera_lib.o \
 ./Sources/dc_motor_lib.o \
+./Sources/error_management.o \
 ./Sources/image_processing_lib.o \
 ./Sources/main.o \
 ./Sources/pid.o \
@@ -30,12 +30,12 @@ OBJS += \
 ./Sources/servo_lib.o 
 
 C_DEPS += \
-./Sources/Error_management.d \
 ./Sources/Events.d \
 ./Sources/SystemController.d \
 ./Sources/battery_lib.d \
 ./Sources/camera_lib.d \
 ./Sources/dc_motor_lib.d \
+./Sources/error_management.d \
 ./Sources/image_processing_lib.d \
 ./Sources/main.d \
 ./Sources/pid.d \

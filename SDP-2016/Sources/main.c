@@ -31,6 +31,7 @@
 #include <battery_lib.h>
 #include <camera_lib.h>
 #include <dc_motor_lib.h>
+#include <error_management.h>
 #include <image_processing_lib.h>
 #include <pid.h>
 #include <serial_communication_lib.h>
@@ -91,7 +92,6 @@
 /* User includes (#include below this line is not maintained by Processor Expert) */
 #include "SystemController.h"
 #include "GlobalVariables.h"
-#include "Error_management.h"
 
 
 /* Global Variables */

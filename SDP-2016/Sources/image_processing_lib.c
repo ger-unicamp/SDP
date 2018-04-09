@@ -1,8 +1,11 @@
 /*
- * ImageProcessing.c
+ * image_processing_lib.c
  *
- *  Created on: 31/12/2016
- *      Author: marcelo
+ * Last update on: 09/04/18
+ * Comments: code formatting only
+ *
+ * Author: Marcelo
+ *
  */
 
 

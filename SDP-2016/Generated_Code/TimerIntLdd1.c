@@ -23,7 +23,7 @@
 **          Interrupt service/event                        : Enabled
 **            Interrupt                                    : INT_PIT
 **            Interrupt priority                           : medium priority
-**          Interrupt period                               : 10 µs
+**          Interrupt period                               : 10 ï¿½s
 **          Initialization                                 : 
 **            Enabled in init. code                        : no
 **            Auto initialization                          : yes
