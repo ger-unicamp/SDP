@@ -28,6 +28,13 @@
 
 
 /* Including needed modules to compile this module/procedure */
+#include <battery_lib.h>
+#include <camera_lib.h>
+#include <dc_motor_lib.h>
+#include <image_processing_lib.h>
+#include <pid.h>
+#include <serial_communication_lib.h>
+#include <servo_lib.h>
 #include "Cpu.h"
 #include "Events.h"
 #include "SI.h"
@@ -82,16 +89,7 @@
 #include "PE_Const.h"
 #include "IO_Map.h"
 /* User includes (#include below this line is not maintained by Processor Expert) */
-#include "CameraController.h"
-#include "MotorController.h"
-#include "ServoController.h"
-#include "BatteryController.h"
-
-#include "ImageProcessing.h"
 #include "SystemController.h"
-#include "PID.h"
-
-#include "SerialCommunication.h"
 #include "GlobalVariables.h"
 #include "Error_management.h"
 

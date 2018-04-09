@@ -9,7 +9,7 @@
 #define SOURCES_ERROR_MANAGEMENT_H_
 
 #include "PE_Types.h"
-#include "ImageProcessing.h"
+#include <image_processing_lib.h>
 
 #endif /* SOURCES_ERROR_MANAGEMENT_H_ */
 

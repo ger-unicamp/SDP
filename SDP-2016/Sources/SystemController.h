@@ -9,11 +9,11 @@
 #define SOURCES_SYSTEMCONTROLLER_H_
 
 
+#include <camera_lib.h>
+#include <dc_motor_lib.h>
+#include <servo_lib.h>
 #include "PE_Types.h"
 
-#include "MotorController.h"
-#include "ServoController.h"
-#include "CameraController.h"
 
 void advancedControl(double pid_output);
 

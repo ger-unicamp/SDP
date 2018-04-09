@@ -4,43 +4,43 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Sources/BatteryController.c \
-../Sources/CameraController.c \
 ../Sources/Error_management.c \
 ../Sources/Events.c \
-../Sources/ImageProcessing.c \
-../Sources/MotorController.c \
-../Sources/PID.c \
-../Sources/SerialCommunication.c \
-../Sources/ServoController.c \
 ../Sources/SystemController.c \
-../Sources/main.c 
+../Sources/battery_lib.c \
+../Sources/camera_lib.c \
+../Sources/dc_motor_lib.c \
+../Sources/image_processing_lib.c \
+../Sources/main.c \
+../Sources/pid.c \
+../Sources/serial_communication_lib.c \
+../Sources/servo_lib.c 
 
 OBJS += \
-./Sources/BatteryController.o \
-./Sources/CameraController.o \
 ./Sources/Error_management.o \
 ./Sources/Events.o \
-./Sources/ImageProcessing.o \
-./Sources/MotorController.o \
-./Sources/PID.o \
-./Sources/SerialCommunication.o \
-./Sources/ServoController.o \
 ./Sources/SystemController.o \
-./Sources/main.o 
+./Sources/battery_lib.o \
+./Sources/camera_lib.o \
+./Sources/dc_motor_lib.o \
+./Sources/image_processing_lib.o \
+./Sources/main.o \
+./Sources/pid.o \
+./Sources/serial_communication_lib.o \
+./Sources/servo_lib.o 
 
 C_DEPS += \
-./Sources/BatteryController.d \
-./Sources/CameraController.d \
 ./Sources/Error_management.d \
 ./Sources/Events.d \
-./Sources/ImageProcessing.d \
-./Sources/MotorController.d \
-./Sources/PID.d \
-./Sources/SerialCommunication.d \
-./Sources/ServoController.d \
 ./Sources/SystemController.d \
-./Sources/main.d 
+./Sources/battery_lib.d \
+./Sources/camera_lib.d \
+./Sources/dc_motor_lib.d \
+./Sources/image_processing_lib.d \
+./Sources/main.d \
+./Sources/pid.d \
+./Sources/serial_communication_lib.d \
+./Sources/servo_lib.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

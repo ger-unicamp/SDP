@@ -29,6 +29,9 @@
 #define __Events_H
 /* MODULE Events */
 
+#include <battery_lib.h>
+#include <camera_lib.h>
+#include <serial_communication_lib.h>
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -81,9 +84,6 @@
 #include "BitIoLdd9.h"
 
 /* User includes*/
-#include "CameraController.h"
-#include "SerialCommunication.h"
-#include "BatteryController.h"
 
 // User Variables
 extern volatile bool serialTest;

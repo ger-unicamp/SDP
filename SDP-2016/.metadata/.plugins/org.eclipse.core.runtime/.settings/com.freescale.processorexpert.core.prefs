@@ -1,0 +1,5 @@
+UserPEpath=/home/guilherme/Processor Expert/PEXDRV_PE5_3
+UserPEpath_Default=/home/guilherme/Processor Expert/CWMCU_PE5_00
+eclipse.preferences.version=1
+localPEpath=/opt/Freescale/KDS_v3/eclipse/ProcessorExpert
+localPEpath_Default=/opt/Freescale/KDS_v3/eclipse/ProcessorExpert
