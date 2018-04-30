@@ -81,3 +81,21 @@ void set_borders(uint8 image[], uint8 *leftBorder, uint8 *rightBorder)
 	}
 	*leftBorder = 63 - border;
 }
+
+double inverse_proportional_avg(uint8_t *image, uint8_t left_border, uint8_t right_border)
+{
+    double avg = 0;
+    for (uint8_t i = left_border; i < right_border; i++) {
+	    avg += image[i];
+    }
+
+    /* Total average */
+    avg /= (right_border - left_border);
+
+    /* Unitarization */
+    avg /= 255.0;
+
+    return (1.0 - avg);
+}
+
+

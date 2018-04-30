@@ -405,7 +405,7 @@ registers of the peripheral(s) configured by the component.
 **          Interrupt service/event                        : Enabled
 **            Interrupt                                    : INT_PIT
 **            Interrupt priority                           : medium priority
-**          Interrupt period                               : 10 µs
+**          Interrupt period                               : 10 Âµs
 **          Initialization                                 : 
 **            Enabled in init. code                        : no
 **            Auto initialization                          : yes

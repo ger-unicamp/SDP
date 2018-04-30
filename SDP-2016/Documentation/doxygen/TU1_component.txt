@@ -404,7 +404,7 @@ registers of the peripheral(s) configured by the component.
 **            Counter frequency                            : Auto select
 **          Counter restart                                : On-match
 **            Period device                                : PIT_LDVAL0
-**            Period                                       : 10 µs
+**            Period                                       : 10 Âµs
 **            Interrupt                                    : Enabled
 **              Interrupt                                  : INT_PIT
 **              Interrupt priority                         : medium priority

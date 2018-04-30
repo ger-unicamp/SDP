@@ -110,6 +110,7 @@ int main(void)
 	PE_low_level_init();
 	/*** End of Processor Expert internal initialization.                    ***/
 
+	auto_exposure_factor = 0;
 	// enables camera stuff
 	Camera_CLK_Interruption_Enable();
 

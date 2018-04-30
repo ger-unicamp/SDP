@@ -70,90 +70,95 @@ void Cpu_OnNMIINT(void)
  */
 void Camera_CLK_Interruption_OnInterrupt(void)
 {
-	switch (state)
+	if(auto_exposure_counter < auto_exposure_factor)
+		auto_exposure_counter++;
+	else
 	{
-	// First state
-	case HALF_LOW_CLK:
-	{
-		// next state
-		state = HIGH_CLK;
-
-		if (clockCounter == 0)
+		auto_exposure_counter = 0;
+		switch (state)
 		{
-			// SI High
-			SI_SetVal();
-			while (!SI_GetVal());
+		// First state
+		case HALF_LOW_CLK:
+		{
+			// next state
+			state = HIGH_CLK;
+
+			if (clockCounter == 0)
+			{
+				// SI High
+				SI_SetVal();
+				while (!SI_GetVal());
+			}
+
+			// End of the cycle
+			// The camera needs an extra clock (129) to send the last pixel
+			else if (clockCounter == 129)
+			{
+				clockCounter = 0;
+
+				// And 20 microseconds to prepare for the next cycle.
+				state = WAIT_TRANSFER_CHARGE;
+
+				// Checks if reading is finished
+				verifySample();
+			}
+			break;
 		}
 
-		// End of the cycle
-		// The camera needs an extra clock (129) to send the last pixel
-		else if (clockCounter == 129)
+		case HIGH_CLK:
 		{
-			clockCounter = 0;
+			// Clock High.
+			CLK_SetVal();
+			while (!CLK_GetVal());
 
-			// And 20 microseconds to prepare for the next cycle.
-			state = WAIT_TRANSFER_CHARGE;
+			clockCounter++;
 
-			// Checks if reading is finished
-			verifySample();
-		}
-		break;
-	}
+			state = HALF_HIGH_CLK;
 
-	case HIGH_CLK:
-	{
-		// Clock High.
-		CLK_SetVal();
-		while (!CLK_GetVal());
-
-		clockCounter++;
-
-		state = HALF_HIGH_CLK;
-
-		break;
-	}
-
-	case HALF_HIGH_CLK:
-	{
-		if (clockCounter == 1)
-		{
-			// SI Low.
-			SI_ClrVal();
-			while (SI_GetVal());
+			break;
 		}
 
-		// Starts the AD convertion
-		AD_Converter_MeasureChan(FALSE, 0);
-		state = LOW_CLK;
-		break;
-	}
-	case LOW_CLK:
-	{
-		// Clock Low.
-		CLK_ClrVal();
-		while (CLK_GetVal());
-
-		state = HALF_LOW_CLK;
-
-		break;
-	}
-
-	// Pixel charge transfer time
-	case WAIT_TRANSFER_CHARGE:
-	{
-		if (transferTime)
+		case HALF_HIGH_CLK:
 		{
-			transferTime++;
+			if (clockCounter == 1)
+			{
+				// SI Low.
+				SI_ClrVal();
+				while (SI_GetVal());
+			}
+
+			// Starts the AD convertion
+			AD_Converter_MeasureChan(FALSE, 0);
+			state = LOW_CLK;
+			break;
 		}
-		else
+		case LOW_CLK:
 		{
-			transferTime = 0;
+			// Clock Low.
+			CLK_ClrVal();
+			while (CLK_GetVal());
+
 			state = HALF_LOW_CLK;
+
+			break;
 		}
 
-		break;
-	}
+		// Pixel charge transfer time
+		case WAIT_TRANSFER_CHARGE:
+		{
+			if (transferTime)
+			{
+				transferTime++;
+			}
+			else
+			{
+				transferTime = 0;
+				state = HALF_LOW_CLK;
+			}
 
+			break;
+		}
+		}
 	}
 }
 

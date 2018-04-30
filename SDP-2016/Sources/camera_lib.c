@@ -50,8 +50,8 @@ void initializeCamera()
 	state = HALF_LOW_CLK;
 
 	clockCounter = 0;
-
 	transferTime = 0;
+	auto_exposure_counter = 0;
 }
 
 // Serial Communication Mode.

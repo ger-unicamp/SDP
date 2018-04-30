@@ -27,6 +27,8 @@ enum clockState {HIGH_CLK, HALF_HIGH_CLK, LOW_CLK, HALF_LOW_CLK, WAIT_TRANSFER_C
 enum logicalLevel {LOW, HIGH};
 
 int clockCounter;
+int auto_exposure_factor;
+int auto_exposure_counter;
 int state;
 int transferTime;
 uint8 rawImage[128];
