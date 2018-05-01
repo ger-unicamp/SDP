@@ -4,4 +4,5 @@ Trabalhando na organização e padronização dos códigos.
 
 Vamos tentar manter as seguintes diretivas:
 
-- todos os comentários devem ser feitos em inglês
+- tudo deve ser feito em inglês (código e comentários)
+- dê preferência ao uso do snake case (ex: int auto_exposure_time = 0)
