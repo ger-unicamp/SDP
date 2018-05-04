@@ -1,0 +1,10 @@
+# KDS Generated files
+Documentation/
+Generated_Code/
+Debug/
+FLASH/
+.cwGeneratedFileSetLog
+.SDP_2016.g_c
+.SDP_2016.g_x
+RemoteSystemsTempFiles/
+.metadata/
