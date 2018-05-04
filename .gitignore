@@ -10,3 +10,4 @@
 *.g_x
 *RemoteSystemsTempFiles/
 *.metadata/
+*ProjectInfo.xml
