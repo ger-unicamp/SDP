@@ -11,3 +11,5 @@
 *RemoteSystemsTempFiles/
 *.metadata/
 *ProjectInfo.xml
+*.settings/
+*/core
