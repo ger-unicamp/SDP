@@ -1,0 +1,16 @@
+# KDS Generated files
+*Documentation/
+*Generated_Code/
+*[Bb]in
+*[Dd]ebug*/
+*[Rr]elease*/
+*FLASH/
+*.cwGeneratedFileSetLog
+*.g_c
+*.g_x
+*RemoteSystemsTempFiles/
+*.metadata/
+*ProjectInfo.xml
+*.settings/
+*/core
+*.cproject
