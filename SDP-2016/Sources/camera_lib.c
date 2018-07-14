@@ -97,7 +97,7 @@ int getRawImageMean(int samplesNum)
 
 	while (currentSample < samplesNumber);
 
-	Camera_CLK_Interruption_DisableEvent();
+	//Camera_CLK_Interruption_DisableEvent();
 }
 
 /*
@@ -115,5 +115,9 @@ void verifySample()
 		}
 	}
 	currentSample++;
+
+	if (currentSample >= samplesNumber) {
+		Camera_CLK_Interruption_DisableEvent();
+	}
 }
 
