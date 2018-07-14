@@ -101,6 +101,10 @@ void Camera_CLK_Interruption_OnInterrupt(void)
 
 				// Checks if reading is finished
 				verifySample();
+			} else {
+
+				// Starts the AD convertion
+				AD_Converter_MeasureChan(FALSE, 0);
 			}
 			break;
 		}
@@ -127,8 +131,7 @@ void Camera_CLK_Interruption_OnInterrupt(void)
 				while (SI_GetVal());
 			}
 
-			// Starts the AD convertion
-			AD_Converter_MeasureChan(FALSE, 0);
+
 			state = LOW_CLK;
 			break;
 		}
