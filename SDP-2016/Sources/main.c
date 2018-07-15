@@ -153,7 +153,7 @@ int main(void)
 	{
 		// Gets a frame from the camera
 		getRawImageMean(1);
-		
+
 		// Binarize the image
 		binarization(image);
 
