@@ -15,6 +15,8 @@
 #include <camera_lib.h>
 #include "PE_Types.h"
 
+#define LIGHT_THRESHOLD 0.6
+
 volatile uint8 referenceImage[128];
 
 void calibration();

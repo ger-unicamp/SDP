@@ -26,7 +26,7 @@ void binarization(uint8 binarizedImage[])
 	for (int border = 0; border < 128; border++)
 	{
 		light = (float) rawImage[border] / (float) referenceImage[border];
-		if (light < 0.6)
+		if (light < LIGHT_THRESHOLD)
 		{
 			binarizedImage[border] = 0;
 		}
