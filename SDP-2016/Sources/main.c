@@ -148,6 +148,7 @@ int main(void)
 	while(SW2_Start_Button_GetVal());
 
 
+	double exp_correction;
 	// Program loop
 	while (TRUE)
 	{
@@ -173,6 +174,18 @@ int main(void)
 		// Update the battery indicator LED
 		updateBatteryLevel();
 		//sendBatteryLevel();
+
+		exp_correction = inverse_proportional_avg(image);
+
+		if (exp_correction <= 0.25) {
+		    auto_exposure_factor = 3;
+		} else if (exp_correction <= 0.5) {
+		    auto_exposure_factor = 2;
+		} else if (exp_correction <= 0.75) {
+		    auto_exposure_factor = 1;
+		} else {
+		    auto_exposure_factor = 0;
+		}
 	}
 
 	/*** Don't write any code pass this line, or it will be deleted during code generation. ***/

@@ -23,6 +23,6 @@ void calibration();
 void binarization(uint8 binarizedImage[]);
 void set_borders(uint8 image[], uint8 *leftBorder, uint8 *rightBorder);
 uint8 get_track_width(uint8 image[]);
-double inverse_proportional_avg(uint8_t *image, uint8_t left_border, uint8_t right_border);
+double inverse_proportional_avg(uint8_t *image);
 
 #endif /* IMAGEPROCESSING_H_ */
