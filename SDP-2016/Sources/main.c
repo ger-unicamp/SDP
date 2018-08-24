@@ -110,7 +110,7 @@ int main(void)
 	PE_low_level_init();
 	/*** End of Processor Expert internal initialization.                    ***/
 
-	auto_exposure_factor = 1;
+	auto_exposure_factor = 0;
 	// enables camera stuff
 	Camera_CLK_Interruption_Enable();
 
@@ -147,7 +147,7 @@ int main(void)
 	while (!SW2_Start_Button_GetVal());
 	while(SW2_Start_Button_GetVal());
 
-	double auto_exp_correction;
+
 	// Program loop
 	while (TRUE)
 	{
@@ -173,18 +173,6 @@ int main(void)
 		// Update the battery indicator LED
 		updateBatteryLevel();
 		//sendBatteryLevel();
-
-		auto_exp_correction = inverse_proportional_avg(image);
-
-		if (auto_exp_correction <= 0.25) {
-			auto_exposure_factor = 3;
-		} else if (auto_exp_correction <= 0.50) {
-			auto_exposure_factor = 2;
-		} else if (auto_exp_correction <= 0.75) {
-			auto_exposure_factor = 1;
-		} else {
-			auto_exposure_factor = 0;
-		}
 	}
 
 	/*** Don't write any code pass this line, or it will be deleted during code generation. ***/
