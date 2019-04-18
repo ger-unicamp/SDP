@@ -1,0 +1,9 @@
+SDP-2016/Debug
+SDP-2016/Documentation
+SDP-2016/Generated_Code
+SDP-2016/*.g_c
+SDP-2016/*.g_x
+SDP-2016/Static_Code
+SDP-2016/Project_Settings/Components_DEBUG
+SDP-2016/.settings
+SDP-2016/ProjectInfo.xml
